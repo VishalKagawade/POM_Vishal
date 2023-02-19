@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="8" passed="5" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-10T07:56:46 IST" name="Suite" finished-at="2023-02-10T07:57:11 IST" duration-ms="24704">
+    <groups>
+      <group name="Sanity">
+        <method signature="LoginTest.verifyBuildTitle()[pri:-1, instance:test.LoginTest@4dbb42b7]" name="verifyBuildTitle" class="test.LoginTest"/>
+        <method signature="LoginTest.verifyLoginWithCorrectCredentials()[pri:2, instance:test.LoginTest@4dbb42b7]" name="verifyLoginWithCorrectCredentials" class="test.LoginTest"/>
+        <method signature="LoginTest.verifyTitleOfLoginPage()[pri:0, instance:test.LoginTest@4dbb42b7]" name="verifyTitleOfLoginPage" class="test.LoginTest"/>
+        <method signature="LoginTest.verifyUrlOfloginPage()[pri:1, instance:test.LoginTest@4dbb42b7]" name="verifyUrlOfloginPage" class="test.LoginTest"/>
+      </group> <!-- Sanity -->
+      <group name="regression">
+        <method signature="LoginTest.verifyBuildTitle()[pri:-1, instance:test.LoginTest@4dbb42b7]" name="verifyBuildTitle" class="test.LoginTest"/>
+        <method signature="LoginTest.verifyLoginWithCorrectCredentials()[pri:2, instance:test.LoginTest@4dbb42b7]" name="verifyLoginWithCorrectCredentials" class="test.LoginTest"/>
+        <method signature="LoginTest.verifyTitleOfLoginPage()[pri:0, instance:test.LoginTest@4dbb42b7]" name="verifyTitleOfLoginPage" class="test.LoginTest"/>
+        <method signature="LoginTest.verifyUrlOfloginPage()[pri:1, instance:test.LoginTest@4dbb42b7]" name="verifyUrlOfloginPage" class="test.LoginTest"/>
+        <method signature="PIMTest.verifyEmpIDfromSearch()[pri:4, instance:test.PIMTest@47d9a273]" name="verifyEmpIDfromSearch" class="test.PIMTest"/>
+        <method signature="PIMTest.verifyPIMPageTitle()[pri:3, instance:test.PIMTest@47d9a273]" name="verifyPIMPageTitle" class="test.PIMTest"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="PIMTest.verifyEmpIDfromSearch()[pri:4, instance:test.PIMTest@47d9a273]" name="verifyEmpIDfromSearch" class="test.PIMTest"/>
+        <method signature="PIMTest.verifyPIMPageTitle()[pri:3, instance:test.PIMTest@47d9a273]" name="verifyPIMPageTitle" class="test.PIMTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2023-02-10T07:56:46 IST" name="Test" finished-at="2023-02-10T07:57:11 IST" duration-ms="24704">
+      <class name="test.PIMTest">
+        <test-method is-config="true" signature="pageobjects()[pri:0, instance:test.PIMTest@47d9a273]" started-at="2023-02-10T07:56:54 IST" name="pageobjects" finished-at="2023-02-10T07:56:54 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageobjects -->
+        <test-method is-config="true" signature="login()[pri:0, instance:test.PIMTest@47d9a273]" started-at="2023-02-10T07:56:54 IST" name="login" finished-at="2023-02-10T07:56:56 IST" duration-ms="2081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyPIMPageTitle()[pri:3, instance:test.PIMTest@47d9a273]" started-at="2023-02-10T07:56:56 IST" name="verifyPIMPageTitle" finished-at="2023-02-10T07:56:58 IST" duration-ms="1738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPIMPageTitle -->
+        <test-method signature="verifyEmpIDfromSearch()[pri:4, instance:test.PIMTest@47d9a273]" started-at="2023-02-10T07:56:58 IST" name="verifyEmpIDfromSearch" finished-at="2023-02-10T07:57:08 IST" duration-ms="10291" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 0 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at mainjava.PIMPage.getEidFromSearchedresults(PIMPage.java:89)
+at test.PIMTest.verifyEmpIDfromSearch(PIMTest.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmpIDfromSearch -->
+        <test-method is-config="true" signature="logOutUser()[pri:0, instance:test.PIMTest@47d9a273]" started-at="2023-02-10T07:57:08 IST" name="logOutUser" finished-at="2023-02-10T07:57:11 IST" duration-ms="2597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOutUser -->
+      </class> <!-- test.PIMTest -->
+      <class name="test.LoginTest">
+        <test-method is-config="true" signature="initBrowser()[pri:0, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:18 IST" name="initBrowser" finished-at="2023-02-10T07:56:46 IST" duration-ms="27800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method is-config="true" signature="pageobjects()[pri:0, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:46 IST" name="pageobjects" finished-at="2023-02-10T07:56:46 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageobjects -->
+        <test-method signature="verifyBuildTitle()[pri:-1, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:46 IST" name="verifyBuildTitle" finished-at="2023-02-10T07:56:46 IST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBuildTitle -->
+        <test-method signature="verifyTitleOfLoginPage()[pri:0, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:46 IST" name="verifyTitleOfLoginPage" finished-at="2023-02-10T07:56:49 IST" duration-ms="2953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitleOfLoginPage -->
+        <test-method signature="verifyUrlOfloginPage()[pri:1, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:49 IST" name="verifyUrlOfloginPage" finished-at="2023-02-10T07:56:49 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUrlOfloginPage -->
+        <test-method signature="verifyLoginWithCorrectCredentials()[pri:2, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:49 IST" name="verifyLoginWithCorrectCredentials" finished-at="2023-02-10T07:56:51 IST" duration-ms="2038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithCorrectCredentials -->
+        <test-method is-config="true" signature="logOutUser()[pri:0, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:56:51 IST" name="logOutUser" finished-at="2023-02-10T07:56:54 IST" duration-ms="2846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOutUser -->
+        <test-method is-config="true" signature="tearDownEnvironment()[pri:0, instance:test.LoginTest@4dbb42b7]" started-at="2023-02-10T07:57:11 IST" name="tearDownEnvironment" finished-at="2023-02-10T07:57:11 IST" duration-ms="705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownEnvironment -->
+      </class> <!-- test.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
